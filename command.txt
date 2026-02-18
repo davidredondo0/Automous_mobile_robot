@@ -1,0 +1,8 @@
+roslaunch odometry_pub robot_bringup.launch drive_mode:=holonomic use_ekf:=true
+
+catkin_make -DCMAKE_BUILD_TYPE=Release
+roslaunch rplidar_ros rplidar_a1.launch serial_port:=/dev/ttyUSB1
+
+
+export ROS_HOSTNAME=localhost
+export ROS_MASTER_URI=http://localhost:11311

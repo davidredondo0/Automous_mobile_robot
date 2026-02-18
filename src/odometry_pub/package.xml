@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>odometry_pub</name>
+  <version>0.1.0</version>
+  <description>The package for bringing up the 4-mecanum-wheel-drive holonomic robot</description>
+
+  <author email="davidredquin@gmail.com">David Redondo</author>
+  <maintainer email="davidredquin@gmail.com">David Redondo</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>tf2_geometry_msgs</exec_depend>
+
+
+</package>

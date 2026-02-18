@@ -1,0 +1,2 @@
+navstack:odometry_pub
+-DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/orangepi/mobile_robot/devel -DCMAKE_INSTALL_PREFIX=/home/orangepi/mobile_robot/install -G Unix Makefiles

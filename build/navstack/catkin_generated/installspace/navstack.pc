@@ -1,0 +1,8 @@
+prefix=/home/orangepi/mobile_robot/install
+
+Name: navstack
+Description: Description of navstack
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

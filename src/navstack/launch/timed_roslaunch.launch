@@ -1,0 +1,13 @@
+<launch>
+    <!-- Use a simple bash script to delay execution -->
+    <arg name="node_name" default="delayed_node"/>
+    <arg name="delay" default="3.0"/>
+    <arg name="pkg" default=""/>
+    <arg name="type" default=""/>
+    
+    <!-- Using bash specifically to sleep and then run the command -->
+    <!-- Note: This is a hacky way but standard for ROS1 -->
+    <node pkg="bash" type="bash" name="$(arg node_name)_delayer" 
+          args="-c 'sleep $(arg delay); $0 $@' " 
+          output="screen" />
+</launch>

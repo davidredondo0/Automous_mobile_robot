@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/orangepi/mobile_robot/install/setup.sh

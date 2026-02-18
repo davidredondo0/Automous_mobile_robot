@@ -1,0 +1,15 @@
+<launch>
+
+    <!-- 1. Robot Bringup (Drivers, Low-level Odometry, EKF, TF) -->
+    <!-- Assuming Lidar on /dev/ttyUSB0, ESP32 on /dev/ttyUSB1 -->
+    <include file="$(find odometry_pub)/launch/robot_bringup.launch">
+        <arg name="drive_mode" value="holonomic"/>
+    </include>
+
+    <!-- 2. Navigation Stack (SLAM, MoveBase) -->
+    <!-- enable_lidar_odom=false to save CPU. EKF will use Wheel+IMU only, which is lighter -->
+    <include file="$(find navstack)/launch/holonomic.launch">
+        <arg name="enable_lidar_odom" value="true"/>
+    </include>
+
+</launch>

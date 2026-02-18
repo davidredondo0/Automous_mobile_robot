@@ -1,0 +1,8 @@
+prefix=/home/orangepi/mobile_robot/install
+
+Name: odometry_pub
+Description: Description of odometry_pub
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: tf tf2 nav_msgs tf2_geometry_msgs
