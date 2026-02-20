@@ -117,7 +117,7 @@ double vx, vy, w;
 unsigned long prevUpdateTime;
 double long updateOldness;
 double long now;
-double long updateRate = 70.0; // ms
+double long updateRate = 20.0; // ms
 
 // Utility functions to handle I2C communication
 bool WireWriteByte(int8_t val) {

@@ -8,8 +8,8 @@ local_costmap:
   rolling_window: true
   resolution: 0.1
   inflation_radius: 0.1
-  width: 1.0
-  height: 1.0
+  width: 2.0
+  height: 2.0
   map_type: costmap
 
   plugins:

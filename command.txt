@@ -4,5 +4,19 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 roslaunch rplidar_ros rplidar_a1.launch serial_port:=/dev/ttyUSB1
 
 
-export ROS_HOSTNAME=localhost
-export ROS_MASTER_URI=http://localhost:11311
+export ROS_HOSTNAME=192.168.0.164
+export ROS_MASTER_URI=http://192.168.0.163:11311
+
+rosrun teleop_twist_joy teleop_node \
+  _axis_linear.x:=1 \
+  _axis_linear.y:=0 \
+  _axis_angular.yaw:=3 \
+  _scale_linear.x:=0.5 \
+  _scale_linear.y:=0.5 \
+  _scale_angular.yaw:=1.0 \
+  _enable_button:=5
+
+
+rosparam load joy.yaml /teleop_twist_joy
+rosrun teleop_twist_joy teleop_node _joy_config:=ps4 __name:=teleop_twist_joy
+roslaunch navstack teleop_ps4.launch
